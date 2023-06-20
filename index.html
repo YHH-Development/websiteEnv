@@ -16,6 +16,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     
    
+
+  
+    
+    
+   
+    
     
 <style>
     
@@ -98,7 +104,29 @@
     </style>
     
     
-    
+        
+   <script>
+      const counters = document.querySelectorAll(".count");
+const speed = 200;
+
+counters.forEach((counter) => {
+  const updateCount = () => {
+    const target = parseInt(+counter.getAttribute("data-target"));
+    const count = parseInt(+counter.innerText);
+    const increment = Math.trunc(target / speed);
+    console.log(increment);
+
+    if (count < target) {
+      counter.innerText = count + increment;
+      setTimeout(updateCount, 1);
+    } else {
+      count.innerText = target;
+    }
+  };
+  updateCount();
+});
+
+  </script>
     
     
     
@@ -115,7 +143,7 @@
                     <ul class="ulleft">
                         <li>
                             <i class="far fa-envelope"></i>
-                            <a href="younghelpinghandsindia@gmail.com">
+                            <a href="mailto:younghelpinghandsindia@gmail.com">
                             
                             younghelpinghandsindia@gmail.com
                                 
@@ -294,7 +322,7 @@
                             
                             
                            <i class="fas fa-user" > </i>
-                            <p >Become a Volunteer</p>
+                            <p >Join Us</p>
                         </div>
 
                     </a>
@@ -329,9 +357,9 @@
     
     
     <div class="aboutt-us container-fluid">
-    <div class="container">
+<!--    <div class="container">-->
 
-     <div><h1>Our Sponsors</h1></div>
+     <div><h1>Collaboration</h1></div>
         <div class="sliderr">
       <div class="slide-track">
         <div class="slide">
@@ -495,21 +523,46 @@
    
     <!-- ################# Charity Number Starts Here#######################--->
 
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <div class="doctor-message">
         <div class="inner-lay">
             <div class="container">
                <div class="row session-title">
                    <h2>Our Achievemtns in Numbers</h2>
-                   <p>We can talk for a long time about advantages of our Dental clinic before other medical treatment facilities.
-But you can read the following facts in order to make sure of all pluses of our clinic:</p>
-               </div>
+                   
+                   
+        
+                   
+           </div>
                 <div class="row">
                     <div class="col-sm-3 numb">
-                        <h3>12+</h3>
-                        <span>YEARS OF EXPEREANCE</span>
+                        
+<!--                        <h3>12+</h3>-->
+                         <h3 data-target="15000" class="count">0</h3>
+                        <span>TOTAL COLLECTION</span>
                     </div>
                     <div class="col-sm-3 numb">
+                        
                         <h3>1812+</h3>
                         <span>HAPPY CHILDRENS</span>
                     </div>
@@ -519,7 +572,7 @@ But you can read the following facts in order to make sure of all pluses of our 
                     </div>
                     <div class="col-sm-3 numb">
                         <h3>48+</h3>
-                        <span>FUNT RAISED</span>
+                        <span>TOTAL VOLUNTEER</span>
                     </div>
                 </div>
             </div>
@@ -533,7 +586,7 @@ But you can read the following facts in order to make sure of all pluses of our 
             <div class="container">
                 <div class="session-title row">
                       <h2>Advisors</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vel nisl a dictum. Donec ut est arcu. Donec hendrerit velit</p>
+<!--                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vel nisl a dictum. Donec ut est arcu. Donec hendrerit velit</p>-->
                 </div>
                 <div class="row team-row">
                     <div class="col-md-3 col-sm-6">
@@ -655,35 +708,36 @@ But you can read the following facts in order to make sure of all pluses of our 
                 <div class="col-md-4 col-sm-12">
                     <h2>About Us</h2>
                     <p>
-                        Smart Eye is a leading provider of information technology, consulting, and business process services. Our dedicated employees offer strategic insights, technological expertise and industry experience.
+                        Young Helping Hands is a non-governmental organization (N.G.O.) which is registered under Society Act with Uttar Pradesh Govt. Young Helping Hands driven by Crowd Funding. We are dedicated to creating positive and sustainable change in society. 
                     </p>
-                    <p>We focus on technologies that promise to reduce costs, streamline processes and speed time-to-market, Backed by our strong quality processes and rich experience managing global... </p>
+                    <p>With a strong focus on addressing essential needs, we work tirelessly to uplift individuals and communities through various initiatives such as food donation, cloth donation, animal care, provision of basic necessities to the poor, sanitary napkin donation, and basic education. </p>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <h2>Useful Links</h2>
                     <ul class="list-unstyled link-list">
-                        <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="about" href="about.html">About us</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="portfolio" href="blog.html">Team</a><i class="fa fa-angle-right"></i></li>
+<!--                        <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i></li>-->
+                        <li><a ui-sref="gallery" href="gallery.html">Gallery</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="contact" href="contact.html">Contact us</a><i class="fa fa-angle-right"></i></li>
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-12 map-img">
                     <h2>Contact Us</h2>
                     <address class="md-margin-bottom-40">
-                        BlueDart <br>
-                        Marthandam (K.K District) <br>
-                        Tamil Nadu, IND <br>
-                        Phone: +91 9159669599 <br>
-                        Email: <a href="mailto:info@anybiz.com" class="">info@bluedart.in</a><br>
-                        Web: <a href="smart-eye.html" class="">www.bluedart.in</a>
+                        Kayam Khera  <br>
+                        Aishbagh,Lucknow <br>
+                        Uttar Pradesh, IND <br>
+                        Phone: +91 8429966484 <br>
+                        Email: <a href="mailto:younghelpinghandsindia@gmail.com" class="">younghelpinghandsindia@gmail.com</a><br>
+                        Web: <a href="smart-eye.html" class="">websitelink</a>
                     </address>
 
                 </div>
             </div>
             
             
+<!--
             <div class="nav-box row clearfix">
                 <div class="inner col-md-9 clearfix">
                     <ul class="footer-nav clearfix">
@@ -699,6 +753,7 @@ But you can read the following facts in order to make sure of all pluses of our 
                 </div>
                   <div class="donate-link col-md-3"><a href="donate.html" class="btn btn-primary "><span class="btn-title">Donate Now</span></a></div>
             </div>
+-->
             
         </div>
         
@@ -706,14 +761,15 @@ But you can read the following facts in order to make sure of all pluses of our 
     </footer>
     <div class="copy">
             <div class="container">
-                <a href="https://www.smarteyeapps.com/">2015 &copy; All Rights Reserved | Designed and Developed by Smarteyeapps</a>
+                <a href="#">2023 &copy; All Rights Reserved | Designed and Developed by YHH</a>
+                
                 
                 <span>
-                <a><i class="fab fa-github"></i></a>
-                <a><i class="fab fa-google-plus-g"></i></a>
-                <a><i class="fab fa-pinterest-p"></i></a>
-                <a><i class="fab fa-twitter"></i></a>
-                <a><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/young_helpinghands/?igshid=p8ebodtqqiq3"><i class="fab fa-instagram"></i></a>
+                <a href="https://in.linkedin.com/company/young-helping-hands"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/younghelpingha4?lang=en"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/younghelpinghands.org.in"><i class="fab fa-facebook-f"></i></a>
         </span>
             </div>
 
