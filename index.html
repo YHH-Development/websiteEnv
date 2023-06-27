@@ -1,11 +1,18 @@
 <!doctype html>
 <html lang="en">
+    
+    
+  
+    
+    
+    
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>YHH</title>
-    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+     <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+<!--    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">-->
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/fav.jpg">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -16,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     
    
-
+  
   
     
     
@@ -38,12 +45,12 @@
 }
 
 .imageSlider {
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 50px;
 }
 
 .sliderr {
-    height: 120px;
+    height: 50px;
     margin: auto;
     overflow: hidden;
 
@@ -55,7 +62,7 @@
 .sliderr .slide-track {
     animation: scroll 10s linear infinite;
     display: flex;
-    width: calc(190px *16);
+    width: calc(190px *15);
     justify-content: space-around;
 }
 
@@ -105,28 +112,7 @@
     
     
         
-   <script>
-      const counters = document.querySelectorAll(".count");
-const speed = 200;
-
-counters.forEach((counter) => {
-  const updateCount = () => {
-    const target = parseInt(+counter.getAttribute("data-target"));
-    const count = parseInt(+counter.innerText);
-    const increment = Math.trunc(target / speed);
-    console.log(increment);
-
-    if (count < target) {
-      counter.innerText = count + increment;
-      setTimeout(updateCount, 1);
-    } else {
-      count.innerText = target;
-    }
-  };
-  updateCount();
-});
-
-  </script>
+  
     
     
     
@@ -191,11 +177,12 @@ counters.forEach((counter) => {
                     </ul>
                 </div>
                 <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
-<!--                    <button class="btn btn-sm btn-success">Join Us</button>-->
-                    <a href="footer.html">
-                        
-                  <a href="footer.html"> <button class="btn btn-sm btn-default" >Donate</button></a> 
+                    <a href="#">
+                    <button class="btn btn-sm btn-success">Join Us</button>
                     </a>
+                        
+                  <a href="donate.html"> <button class="btn btn-sm btn-default" >Donate</button></a> 
+<!--                    </a>-->
                 </div>
             </div>
         </div>
@@ -221,7 +208,7 @@ counters.forEach((counter) => {
                                     <a class="nav-link" href="about_us.html">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="footer.html">Donate</a>
+                                    <a class="nav-link" href="donate.html">Donate</a>
                                 </li>
 
                                 <li class="nav-item">
@@ -354,9 +341,10 @@ counters.forEach((counter) => {
  <!-- -------------------------------------Image Scroller-------------------------------------------- -->
     
     
+<!--       <marquee scrollamount="10" style="color:limegreen" ><b>Shubham Goyal |<span> </span>Alisha Rajput | <span> </span>Shashank Mishra |<span> </span>Vinay Kumar |<span> </span>Saif Ali |<span> </span>Prachi Srivastava |<span> </span>Aashish Srivastav |<span> </span>Ajay Malhotra |<span> </span>Deves Gupta | <span> </span>Mayank Mahawar |<span> </span>Swabhiman Behra |<span> </span>Radha Yadav |<span> </span>Shivamand Neha |<span> </span>Samudra Borah |<span> </span>Sukalpa Rathore |<span> </span>Nabeel Ahmad |<span> </span>Vaishali Singh |<span> </span>Neha Kohili |<span> </span>Mayank Sharma |<span> </span>Bhavya Srivasta |<span> </span>Ashutosh Gupta |<span> </span>Harshita Roheela |<span> </span>Shivani Maurya | <span> </span>Vyankatesh Mishra |<span> </span>Rohit Yadav |<span> </span>Abhay Rai |</b></marquee>-->
     
-    
-    <div class=" container-fluid mission-vision">
+<!--
+    <div style="background-color: darkgrey" class=" container-fluid mission-vision">
     <div class="container">
          <div class="row mission">
      <h1 >Collaboration</h1>
@@ -371,7 +359,7 @@ counters.forEach((counter) => {
               padding-top: 5px;">
         </div>
         <div class="slide">
-          <img src="/assets/images/sponsors/drools.png" alt="im3">
+          <img src="/assets/images/sponsors/iskon.jpg" alt="im3">
         </div>
         <div class="slide">
           <img src="/assets/images/sponsors/drools.png" alt="im4" style="
@@ -436,6 +424,7 @@ counters.forEach((counter) => {
     </div>
         </div>
 </div> 
+-->
     
      <!-- ################# Image scroller  close here #######################--->  
     
@@ -525,29 +514,13 @@ counters.forEach((counter) => {
    
     <!-- ################# Charity Number Starts Here#######################--->
 
-    
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
     
     
     
 
-    <div class="doctor-message">
-        <div class="inner-lay">
+    <div class="doctor-message" >
+        <div class="inner-lay" style="padding-top: 60px">
             <div class="container">
                <div class="row session-title">
                    <h2>Our Achievemtns in Numbers</h2>
@@ -559,21 +532,21 @@ counters.forEach((counter) => {
                 <div class="row">
                     <div class="col-sm-3 numb">
                         
-<!--                        <h3>12+</h3>-->
-                         <h3 data-target="15000" class="count">30,000</h3>
+                            
+                         <h3 data-target="100000" class="count counter" >0</h3>
                         <span>TOTAL COLLECTION</span>
                     </div>
                     <div class="col-sm-3 numb">
                         
-                        <h3>1812+</h3>
+                         <h3 data-target="350" class="count counter" >0</h3>
                         <span>HAPPY CHILDRENS</span>
                     </div>
                     <div class="col-sm-3 numb">
-                        <h3>52+</h3>
+                         <h3 data-target="250" class="count counter" >0</h3>
                         <span>EVENTS</span>
                     </div>
                     <div class="col-sm-3 numb">
-                        <h3>48+</h3>
+                         <h3 data-target="100" class="count counter" >0</h3>
                         <span>TOTAL VOLUNTEER</span>
                     </div>
                 </div>
@@ -788,5 +761,34 @@ counters.forEach((counter) => {
 <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
 <script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
 <script src="assets/js/script.js"></script>
+    
+    <script>
+      const counters = document.querySelectorAll(".count");
+const speed = 97;
+
+counters.forEach((counter) => {
+  const updateCount = () => {
+    const target = parseInt(+counter.getAttribute("data-target"));
+    const count = parseInt(+counter.innerText);
+    const increment = Math.trunc(target / speed);
+    console.log(increment);
+
+    if (count < target) {
+      counter.innerText = count + increment;
+      setTimeout(updateCount, 1);
+    } else {
+      count.innerText = target;
+    }
+  };
+  updateCount();
+});
+
+  </script> 
+    
+    
+    
+    
+    
+    
 
 </html>
