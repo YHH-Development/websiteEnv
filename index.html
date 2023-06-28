@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     
+<!--    <link rel="stylesheet" type="text/css" href="assets/css/underline.css"/>-->
+    
    
   
   
@@ -31,6 +33,111 @@
     
     
 <style>
+ @import url('https://fonts.googleapis.com/css2?family=Play&display=swap'); https://techblog.geekyants.com/some-of-the-most-popular-css-text-animations
+    
+  /* -----------------glowing tetx -------------- */ 
+    
+    .wrapper.two {
+    background-color: limegreen;
+/*    font-size: 6rem;*/
+    font-family: "Play", sans-serif;
+}
+.neon p {
+/*    margin: 0.5rem auto;*/
+    animation: neon 1s ease infinite;
+}
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: #eda0d3;
+    }
+}
+    
+    
+    
+ /* --------------------popup------------------- */
+    
+    
+       
+ @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+*/
+
+
+/*
+.content {
+    padding: 0 5rem;
+}
+*/
+
+.popup {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10, 0, 0, .3);
+    display: grid;
+    place-content: center;
+    opacity: 1;
+    pointer-events: none;
+/*    transition: 200ms ease-in-out opacity;*/
+}
+.popup-content {
+    width: clamp(300px, 90vw, 500px);
+    background-color: black;
+    padding: clamp(1.5rem, 100vw, 3rem);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+    border-radius: .5em;
+    opacity: 1;
+    transform: translateY(20%);
+    transition: 200ms ease-in-out opacity,
+                200ms ease-in-out transform;
+    position: relative;
+}
+.popup h6 {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+}
+.popup h6 :active {
+    transform: scale(.9);
+}
+
+.showPopup {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 /* ---------------Image Scroller------------------------ */
@@ -107,22 +214,76 @@
 }
 
     
-
-    </style>
+ </style>
     
     
-        
+    
   
-    
-    
     
     
 </head>
 
-<body>
+<body onload="myfunction()">
+    
+    
+       
+<!--
+              <div class="popup">
+        <div class="popup-content">
+            <h6>X</h6>
+            <h2>Donate...</h2>
+            <p><div class="container">
+  <div>
+    Donate as you can for poor children and people also donate etc.....................
+      
+      Button aad hoga abhi donate ka 
+  
+</div>
+            </div>
+        </div>
+    </div>
+-->
+    
+    
+    
+    
+     
+       <script>  
+        function myfunction(){
+             
+          
+        
+             
+         
+        const popup = document.querySelector('.popup');
+        const x = document.querySelector('.popup-content h6')
+
+        window.addEventListener('load', function(){
+            
+            
+            setTimeout(function(){
+                 popup.classList.add('showPopup');
+            popup.childNodes[1].classList.add('showPopup');
+            },1000)
+            
+           
+        })
+        x.addEventListener('click', () => {
+            popup.classList.remove('showPopup');
+            popup.childNodes[1].classList.remove('showPopup');
+        })
+             
+             
+         }
+         </script>    
+    
+    
+    
+    
+    
 
 <header class="continer-fluid ">
-    <div  class="header-top">
+    <div  class="header-top" style="padding-top: 5px">
         <div class="container">
             <div class="row col-det">
                 <div class="col-lg-6 d-none d-lg-block">
@@ -187,8 +348,8 @@
             </div>
         </div>
     </div>
-    <div id="menu-jk" class="header-bottom">
-        <div class="container">
+    <div id="menu-jk" class="header-bottom" >
+        <div class="container" >
             <div class="row nav-row">
                 <div class="col-lg-3 col-md-12 logo">
                     <a href="index.html">
@@ -276,7 +437,7 @@
                     <div class="row">
                         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
                             <div class="slider-captions ">
-                                <h1 class="slider-title">We provide food to the poors so that no ones dies with the poverty</h1>
+                                <h1 class="slider-title">It's time for Donate</h1>
                                 <p class="slider-text hidden-xs">It's not how much we give,but how much love we put into giving</p>
                                
                             </div>
@@ -288,25 +449,34 @@
         </div>
     </div>                 
                   
- <!--  ************************* About Us Starts Here ************************** -->    
+ <!--  ************************* About Us Starts Here ************************** --> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
        
 <div class="about-us container-fluid">
     <div class="container">
 
         <div class="row natur-row no-margin w-100">
             <div class="text-part col-md-6">
-                <h2>About Our NGO <span ><img src="/assets/images/favicon.png" style="text-align: center"></span></h2>
+                <h2 style="font-weight: bold" >About Our NGO <span ><img src="/assets/images/favicon.png" style="text-align: center"></span></h2>
                 <p>Young Helping Hands is a non-governmental organization (N.G.O.) which is registered under Society Act with Uttar Pradesh Govt. Young Helping Hands driven by Crowd Funding. We are dedicated to creating positive and sustainable change in society. With a strong focus on addressing essential needs, we work tirelessly to uplift individuals and communities through various initiatives such as food donation, cloth donation, animal care, provision of basic necessities to the poor, sanitary napkin donation, and basic education. </p>
                
 
                 
             </div>
             <div class="image-part col-md-6">
-                <div class="about-quick-box row">
+                <div class="about-quick-box row wrapper two">
                     <a  class="col-md-6" href="https://wa.me/919473634958" class="btn_2" >
 
-                        <div class="about-qcard" >
-                            
+                        <div class="about-qcard neon"  >
                             
                            <i class="fas fa-user" > </i>
                             <p >Join Us</p>
@@ -315,8 +485,8 @@
                     </a>
 
                     
-                     <a class="col-md-6" href="footer.html">
-                        <div class="about-qcard ">
+                     <a class="col-md-6" href="donate.html">
+                        <div class="about-qcard neon ">
                            <i class="fas fa-donate yell"></i>
                             <p>Give Donation</p>
                         </div>
@@ -325,8 +495,12 @@
                       
                     </div>
                 </div>
+                
+                
             </div>
+            
         </div>
+        
     </div>
     
     
@@ -336,7 +510,7 @@
   <!-- ################# About us close here #######################---> 
    
     
-    
+           <marquee scrollamount="10" style="color:darkgreen;font-family: cursive;font-size:20px;background-color: lightblue" ><b>The value of life is not in its duration, but in its donation. You are not important because of how long you live, you are important because of how effective you live. – Myles Munroe</b></marquee>
     
  <!-- -------------------------------------Image Scroller-------------------------------------------- -->
     
@@ -354,40 +528,7 @@
           <img src="/assets/images/sponsors/peesafe.png" alt="peesafe.png" style="
               padding-top:5px; height: 10px;width:10px">
         </div>
-        <div class="slide">
-          <img src="/assets/images/sponsors/drools.png" alt="drools.png" style="
-              padding-top: 5px;">
-        </div>
-        <div class="slide">
-          <img src="/assets/images/sponsors/iskon.jpg" alt="im3">
-        </div>
-        <div class="slide">
-          <img src="/assets/images/sponsors/drools.png" alt="im4" style="
-              padding-top: 15px;">
-        </div>
-        <div class="slide">
-          <img src="/assets/images/sponsors/drools.png" alt="5" style="
-              padding-top: 20px;">
-        </div>
-        <div class="slide">
-          <img src="/assets/images/sponsors/drools.png" alt="6" style="
-              padding-top: 5px;">
-        </div>
-        <div class="slide">
-          <img src="images/slider/ericsson.png" alt="7">
-        </div>
-        <div class="slide">
-          <img src="images/slider/espn.png" alt="8" style="
-              padding-top: 10px;">
-        </div>
-        <div class="slide">
-          <img src="images/slider/IBM.png" alt="9" style="
-              padding-top: 15px;">
-        </div>
-        <div class="slide">
-          <img src="images/slider/localmotors.png" alt="4" style="
-              padding-top: 5px;">
-        </div>
+      
         <div class="slide">
           <img src="images/slider/LT.png" alt="7" style="
               padding-top: 10px;">
@@ -396,25 +537,7 @@
           <img src="images/slider/Mmotors.png" alt="7" style="
               padding-top: 10px;">
         </div>
-        <div class="slide">
-          <img src="images/slider/samsung.png" alt="5" style="
-              padding-top: 20px;">
-        </div>
-        <div class="slide">
-          <img src="images/slider/Sap.png" alt="4" style="
-              padding-top: 15px;">
-        </div>
-        <div class="slide">
-          <img src="images/slider/SHELL.png" alt="3">
-        </div>
-        <div class="slide">
-          <img src="images/slider/tacobell.png" alt="3" style="
-              padding-top: 5px;">
-        </div>
-        <div class="slide">
-          <img src="images/slider/Tesla.png" alt="3" style="
-              padding-top: 15px;">
-        </div>
+        
         <div class="slide">
           <img src="images/slider/upstocx.png" alt="3" style="
               padding-top: 15px;">
@@ -782,6 +905,11 @@ counters.forEach((counter) => {
   };
   updateCount();
 });
+        
+        
+        
+      
+        
 
   </script> 
     
